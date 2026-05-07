@@ -1,0 +1,18 @@
+{
+  "name": "boosterai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "App móvil de notas de clase con agente IA (OpenAI + Supabase)",
+  "workspaces": [
+    "app"
+  ],
+  "scripts": {
+    "app": "npm --workspace app run start",
+    "ios": "npm --workspace app run ios",
+    "android": "npm --workspace app run android",
+    "supabase:start": "supabase start --workdir backend",
+    "supabase:stop": "supabase stop --workdir backend",
+    "supabase:reset": "supabase db reset --workdir backend",
+    "supabase:serve": "supabase functions serve --workdir backend"
+  }
+}

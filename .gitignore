@@ -1,0 +1,45 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Expo
+app/.expo/
+app/dist/
+app/web-build/
+app/expo-env.d.ts
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Native
+app/ios/Pods/
+app/ios/build/
+app/android/.gradle/
+app/android/build/
+app/android/app/build/
+
+# Supabase
+backend/supabase/.branches/
+backend/supabase/.temp/
+backend/.env
+
+# Editor / IDE
+.vscode/
+.idea/
+.DS_Store
+.claude/
+
+# Build
+*.log
+*.tsbuildinfo
