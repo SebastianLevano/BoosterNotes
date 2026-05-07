@@ -22,6 +22,63 @@ BoosterAi/
 
 ---
 
+## Probar la app (sin necesidad de clonar el repo)
+
+### Android (APK directo) — recomendado
+
+1. Desde tu celular Android, abre este link:
+   **https://expo.dev/artifacts/eas/mWRzzjSd1AyYqnb2EJdcw7.apk**
+2. Toca para descargar el archivo `.apk` (~50–80 MB).
+3. Cuando termine la descarga, ábrelo desde la barra de notificaciones o el
+   gestor de archivos.
+4. Android te pedirá permiso para **"Instalar apps de fuentes desconocidas"**.
+   Acéptalo (es seguro: el APK está firmado por el sistema de build oficial de
+   Expo). En algunos dispositivos hay que activarlo en `Ajustes → Seguridad →
+   Instalar apps desconocidas` para tu navegador.
+5. Toca **Instalar**. La app aparece como **BoosterNotes** en el launcher.
+6. Ábrela, crea una cuenta con tu email y empieza a tomar notas.
+
+> Si prefieres compartir el APK con otra persona, puedes mandarles
+> directamente el link de arriba — es público.
+
+Página oficial del build con QR para escanear:
+https://expo.dev/accounts/sebastianlev/projects/boosternotes/builds/a99f7da8-085d-4bc5-b2f9-60b612cb1fde
+
+### iOS
+
+iOS no permite instalar IPAs públicos sin pasar por la App Store o TestFlight,
+y ambos requieren cuenta de **Apple Developer Program** (USD $99/año). Hay dos
+caminos para probar la app desde un iPhone:
+
+**Opción A — TestFlight (recomendado para distribución real, requiere Apple
+Developer Account)**
+
+```bash
+# Compila el IPA y lo sube a TestFlight automáticamente
+cd app
+npx eas-cli build --platform ios --profile preview
+npx eas-cli submit --platform ios --latest
+```
+
+Una vez aceptado por TestFlight (toma ~24h la primera vez), invitas testers
+con su email — ellos instalan TestFlight desde la App Store y reciben un link
+para descargar la app.
+
+**Opción B — Expo Go con tunnel (sin pagar, solo mientras tu Mac esté
+encendida)**
+
+```bash
+cd app
+npx expo start --tunnel
+```
+
+Esto genera una URL pública (ngrok-style) que cualquiera con **Expo Go**
+instalado en su iPhone puede abrir. Escanean el QR con la cámara o pegan la
+URL `exp://...` en Expo Go. Limitación: solo funciona mientras tu Mac corra
+el dev server.
+
+---
+
 ## Requisitos
 
 - **Node.js** 20+

@@ -1,21 +1,21 @@
 {
   "expo": {
-    "name": "BoosterAi",
-    "slug": "boosterai",
+    "name": "BoosterNotes",
+    "slug": "boosternotes",
     "version": "0.1.0",
     "orientation": "portrait",
-    "scheme": "boosterai",
+    "scheme": "boosternotes",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.boosterai.app"
+      "bundleIdentifier": "com.boosternotes.app"
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
       },
-      "package": "com.boosterai.app"
+      "package": "com.boosternotes.app"
     },
     "web": {
       "bundler": "metro"
@@ -26,6 +26,19 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ab2666eb-75ee-4627-ad6f-e2a634a5a39a"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ab2666eb-75ee-4627-ad6f-e2a634a5a39a"
+      }
+    },
+    "owner": "sebastianlev"
   }
 }
